@@ -1,0 +1,46 @@
+====================================================================================================
+
+Classification Report at Number Estimators = 100
+                               precision    recall  f1-score   support
+
+                 Fusion Beats       0.86      0.58      0.69       162
+                 Normal Beats       0.97      1.00      0.98     18118
+Supraventricular Ectopy Beats       0.99      0.58      0.73       556
+         Unclassifiable Beats       1.00      0.92      0.96      1608
+     Ventricular Ectopy Beats       0.97      0.86      0.91      1448
+
+                     accuracy                           0.97     21892
+                    macro avg       0.96      0.79      0.85     21892
+                 weighted avg       0.97      0.97      0.97     21892
+
+====================================================================================================
+
+Classification Report at Number Estimators = 200
+                               precision    recall  f1-score   support
+
+                 Fusion Beats       0.86      0.58      0.69       162
+                 Normal Beats       0.97      1.00      0.98     18118
+Supraventricular Ectopy Beats       0.99      0.58      0.73       556
+         Unclassifiable Beats       1.00      0.92      0.96      1608
+     Ventricular Ectopy Beats       0.97      0.86      0.91      1448
+
+                     accuracy                           0.97     21892
+                    macro avg       0.96      0.79      0.86     21892
+                 weighted avg       0.97      0.97      0.97     21892
+
+====================================================================================================
+
+Classification Report at Number Estimators = 300
+                               precision    recall  f1-score   support
+
+                 Fusion Beats       0.86      0.57      0.69       162
+                 Normal Beats       0.97      1.00      0.98     18118
+Supraventricular Ectopy Beats       0.99      0.58      0.74       556
+         Unclassifiable Beats       1.00      0.92      0.96      1608
+     Ventricular Ectopy Beats       0.97      0.86      0.91      1448
+
+                     accuracy                           0.97     21892
+                    macro avg       0.96      0.79      0.86     21892
+                 weighted avg       0.97      0.97      0.97     21892
+
+====================================================================================================
