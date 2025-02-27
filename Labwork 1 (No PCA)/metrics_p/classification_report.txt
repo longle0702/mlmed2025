@@ -1,0 +1,35 @@
+====================================================================================================
+
+Classification Report at Number Estimators = 100
+              precision    recall  f1-score   support
+
+    Abnormal       0.98      0.99      0.98      2149
+      Normal       0.98      0.94      0.96       762
+
+    accuracy                           0.98      2911
+   macro avg       0.98      0.96      0.97      2911
+weighted avg       0.98      0.98      0.98      2911
+
+====================================================================================================
+
+Classification Report at Number Estimators = 200
+              precision    recall  f1-score   support
+
+    Abnormal       0.98      0.99      0.98      2149
+      Normal       0.97      0.94      0.96       762
+
+    accuracy                           0.98      2911
+   macro avg       0.98      0.96      0.97      2911
+weighted avg       0.98      0.98      0.98      2911
+
+====================================================================================================
+
+Classification Report at Number Estimators = 300
+              precision    recall  f1-score   support
+
+    Abnormal       0.98      0.99      0.99      2149
+      Normal       0.97      0.94      0.96       762
+
+    accuracy                           0.98      2911
+   macro avg       0.98      0.97      0.97      2911
+weighted avg       0.98      0.98      0.98      2911
