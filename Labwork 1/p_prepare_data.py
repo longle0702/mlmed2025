@@ -17,9 +17,9 @@ class P_Data:
     p_train, p_test, p_train_label, p_test_label = train_test_split(p_data, p_label, test_size=0.2, random_state=42)
 
     smote = SMOTE(random_state=42)
-    p_train_resampled, p_train_label_resampled = smote.fit_resample(p_train, p_train_label)
+    p_train, p_train_label = smote.fit_resample(p_train, p_train_label)
 
-    p_train_label_resampled = p_train_label_resampled.map(classes)
+    p_train_label = p_train_label.map(classes)
     p_test_label = p_test_label.map(classes)
 
     print("Okay!")
