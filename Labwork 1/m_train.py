@@ -2,6 +2,7 @@ from m_prepare_data import M_Data
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import balanced_accuracy_score
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
@@ -19,7 +20,7 @@ for i in [100, 200, 300]:
     model = RandomForestClassifier(n_estimators=i, random_state=42)
     model.fit(m_train_pca, data.m_train_label)
     m_pred = model.predict(m_test_pca)
-
+    balanced_acc= balanced_accuracy_score(m_test_pca, m_pred)
     def normalize_confusion_matrix(cm, norm='true'):
         if norm == 'true':
             cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
@@ -31,7 +32,10 @@ for i in [100, 200, 300]:
             raise ValueError("Unknown normalization type. Use 'true', 'pred', or 'all'.")
         
         return cm_normalized
-    
+
+    print('='*100)
+    print()
+    print(f"Balanced Accuracy at Number Estimators = {i}: {balanced_acc}")
     print(f"Classification Report at Number Estimators = {i}")
     print(classification_report(data.m_test_label, m_pred))
 
@@ -49,5 +53,3 @@ for i in [100, 200, 300]:
     plt.title(f'Normalized Confusion Matrix at Number Estimators = {i}')
     plt.savefig(f'normalized_confusion_matrix_n_estimators_{i}.png')
     plt.show()
-
-    print('='*100)

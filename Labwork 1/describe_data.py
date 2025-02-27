@@ -6,6 +6,8 @@ p_data = P_Data()
 m = m_data.m
 p = p_data.p
 
-print(m.describe())
+print('MIT-BIH Arrhythmia Database')
+print(m.info())
 print("-"*100)
-print(p.describe())
+print('PTB Diagnostic ECG Database')
+print(p.info())
