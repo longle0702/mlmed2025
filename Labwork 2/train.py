@@ -16,7 +16,7 @@ param_grid = {
     'min_samples_leaf': [10, 15, 20],
     'l2_regularization': [0, 0.1, 0.001],
     'max_leaf_nodes': [11, 21, 31], 
-    'warm_start' : [True],
+    'warm_start' : [True, False],
     'loss' : ['absolute_error']
 }
 
