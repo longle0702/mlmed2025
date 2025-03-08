@@ -13,8 +13,11 @@ model = HistGradientBoostingRegressor()
 param_grid = {
     'learning_rate': [0.01, 0.1, 0.2],
     'max_iter': [100, 150, 200],
-    'max_depth': [None, 2, 3],
-    'min_samples_leaf': [10, 15, 20]
+    'min_samples_leaf': [10, 15, 20],
+    'l2_regularization': [0, 0.1, 0.001],
+    'max_leaf_nodes': [11, 21, 31], 
+    'warm_start' : [True],
+    'loss' : ['absolute_error']
 }
 
 grid_search = GridSearchCV(model, param_grid, cv=5, scoring='neg_mean_absolute_error', verbose=2)
@@ -26,4 +29,4 @@ y_pred = best_model.predict(X_test)
 mae = mean_absolute_error(y_test, y_pred)
 print("Best MAE:", mae)
 
-joblib.dump(best_model, 'best_hgbr.pkl')
+joblib.dump(best_model, 'best_hgbr.pkl')    
