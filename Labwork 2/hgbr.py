@@ -7,7 +7,7 @@ import joblib
 df = pd.read_csv(r'/home/long/longdata/mlmed/prac2/1/training_set_pixel_size_and_HC.csv')
 X = df[['pixel size(mm)']]
 y = df['head circumference (mm)']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
 model = HistGradientBoostingRegressor()
 param_grid = {
