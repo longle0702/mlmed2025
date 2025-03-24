@@ -1,16 +1,14 @@
 import matplotlib.pyplot as plt
 from PIL import Image
 import os
+import pandas as pd
 
-gt = r'D:\USTH\Nam Ba\ml in med\mlmed2025\Labwork 2\1\val_set\648_HC.png'
-mask = r'D:\USTH\Nam Ba\ml in med\mlmed2025\Labwork 2\1\val_mask\648_HC_Annotation.png'
-plt.figure(figsize=(12, 10))
-plt.subplot(1, 2, 1)
-plt.imshow(Image.open(gt), cmap='gray')
-plt.title('Original Image')
-plt.axis('off')
-plt.subplot(1, 2, 2)
-plt.imshow(Image.open(mask), cmap='gray')
-plt.title('Ground Truth')
-plt.axis('off')
-plt.tight_layout()
+df = pd.read_csv(r'D:\USTH\Nam Ba\ml in med\mlmed2025\Labwork 2\training_set_pixel_size_and_HC.csv')
+X = df[['pixel size(mm)']]
+y = df['head circumference (mm)']
+
+plt.scatter(X, y)
+plt.xlabel('pixel size(mm)')
+plt.ylabel('head circumference (mm)')
+plt.title('Pixel Size vs Head Circumference')
+plt.show()

@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import HistGradientBoostingRegressor
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, r2_score, mean_absolute_percentage_error
 import pandas as pd
 import joblib
 
@@ -27,6 +27,15 @@ print("Best Parameters:", grid_search.best_params_)
 y_pred = best_model.predict(X_test)
 
 mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+rmse = root_mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+mape = mean_absolute_percentage_error(y_test, y_pred)
+
 print("Best MAE:", mae)
+print("Best MSE:", mse)
+print("Best RMSE:", rmse)
+print("Best R2:", r2)
+print("Best MAPE:", mape)
 
 joblib.dump(best_model, 'best_hgbr.pkl')    

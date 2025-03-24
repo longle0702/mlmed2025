@@ -1,6 +1,0 @@
-Best Parameters: {'l2_regularization': 0.1, 'learning_rate': 0.1, 'loss': 'absolute_error', 'max_iter': 100, 'max_leaf_nodes': 21, 'min_samples_leaf': 20, 'warm_start': True}
-MAE: 19.192080108679864
-MSE: 1174.8652222973262
-RMSE: 34.27630701078117
-R^2 Score: 0.6926960745097824
-MAPE: 0.1588364378727584
